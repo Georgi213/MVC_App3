@@ -1,0 +1,25 @@
+﻿@model MVC_App.Models.Guest
+
+@{
+    ViewBag.Title = "Tänan";
+}
+<div>
+    <p>Tänan sind, @Model.Name </p>
+</div>
+<div>
+    @if (Model.WillAttend == true)
+    {
+        @:Ootame sind, kallis sõber!
+        <p>
+            <img src="~/Images/thanks.jpg"/>
+        </p>
+    }
+    else
+    {
+        @:Halvasti uudis. Näeme hiljem!
+        <p>
+            <img src="~/Images/bad.jpg" />;
+        </p>
+    }
+<p>@ViewBag.Message</p> @*ViewBag.Message - отчёт об отправке письма с приглашением*@
+</div>
